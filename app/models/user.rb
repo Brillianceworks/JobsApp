@@ -16,16 +16,6 @@
 #  conf_pwd   :string(255)
 #
 
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-one:
-  first_name: MyString
-  last_name: MyString
-  email: MyString
-  gender: MyString
-
-two:
-  first_name: MyString
-  last_name: MyString
-  email: MyString
-  gender: MyString
+class User < ActiveRecord::Base
+  attr_accessible :email, :first_name, :gender, :last_name, :phno, :dob
+end

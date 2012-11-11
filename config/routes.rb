@@ -1,5 +1,10 @@
 JobsApp::Application.routes.draw do
   
+  resource :users
+  match '/new', :to => 'users#new', :as => 'new_user'
+  #get "users/new"
+
+  #get "users/destroy"
 
   #get "pages/home"
   root :to => 'pages#home'

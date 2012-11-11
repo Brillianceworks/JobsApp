@@ -11,21 +11,8 @@
 #  updated_at :datetime         not null
 #  phno       :string(255)
 #  dob        :string(255)
-#  user_name  :string(255)
-#  pwd        :string(255)
-#  conf_pwd   :string(255)
 #
 
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-one:
-  first_name: MyString
-  last_name: MyString
-  email: MyString
-  gender: MyString
-
-two:
-  first_name: MyString
-  last_name: MyString
-  email: MyString
-  gender: MyString
+class User < ActiveRecord::Base
+  attr_accessible :email, :first_name, :gender, :last_name, :phno, :dob
+end

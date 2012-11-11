@@ -10,12 +10,15 @@
 #  email              :string(255)
 #  encrypted_password :string(255)
 #  salt               :string(255)
+#  user_name          :string(255)
 #
-#require 'digest'
+
+
 class User < ActiveRecord::Base
   attr_accessor :password
-  attr_accessible :first_name, :last_name, :email, :password, :password_confirmation
+  attr_accessible :first_name, :last_name, :email, :password, :password_confirmation, :user_name
 
+  validates :first_name, :presence => true
   validates :password, :presence => true,
 		       :confirmation => true  
 

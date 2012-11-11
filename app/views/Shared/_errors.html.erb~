@@ -1,9 +1,0 @@
-<% if @resource.errors.any? %>
-  <div>
-    <h3><%= pluralize(@resource.errors.count, "error") %></h3>
-    <ul>
-    <%= @resource.errors.full_messages.each do |m| %>
-      <li><%= m %></li>
-    <% end %>
-  </div>
-<% end %>

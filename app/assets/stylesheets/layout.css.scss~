@@ -115,3 +115,9 @@ display:inline-block; /* IE is so silly */
 background: #42aaff;
 text-decoration: underline;
 }
+
+.flash, .success {
+  background: #E6EFC2;
+  color: #264409;
+  border-color: #FFD324; 
+}

@@ -1,16 +1,10 @@
 class UsersController < ApplicationController
-  def new
-    @user = User.new
+  def show
+    @user = User.find(params[:id])
+    @title = @user.first_name
   end
-  def create
-    @user = User.create(params[:user])
-    if @user.save
-    render :text => "User Successfully Created"
-    else
-      render :text => "Not success"
-    end
+  def new
+    @title = "Sign Up"
   end
 
-  def destroy
-  end
 end

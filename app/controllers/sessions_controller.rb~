@@ -15,8 +15,11 @@ class SessionsController < ApplicationController
     end
   end
   def destroy
+    flash[:message] = "Successfully Signout, Good day!"
+    #flash.keep(:message)
     sign_out
-    flash.now[:success] = "Successfully Signout!"
+    #if current_user.nil?
+    #flash.now[:error] = "Successfully Signout!"
     redirect_to root_path
   end
 end

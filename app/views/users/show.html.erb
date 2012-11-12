@@ -1,5 +1,5 @@
 <h1>
-  <%= gravatar_for @user %>
+  <%= link_to (gravatar_for @user), "http://gravatar.com/emails", :confirm => 'Change your gravatar, Make sure you will redirect to Gravatar Website?' %>
   Welcome <%= @user.first_name %>
 </h1>
 

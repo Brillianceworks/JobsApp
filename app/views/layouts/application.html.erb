@@ -18,10 +18,12 @@
 	</div>
         <div id="contentwrap">
         <div id="content">
+          <div class= "notice">
           <% flash.each do |key, value| %>
 	    <div class = "flash <%= key %>"><%= value %></div>
           <% end %>
           <%= yield %>
+          </div>
         </div>
         </div>
         <% if !signed_in? %>
@@ -40,6 +42,14 @@
             <p>This is the Footer</p>
         </div>
         </div>
+        <% if Rails.env.development? %>
+        <div id = "debugwrap">
+          <div id = "debug">
+            <h3>[params] Debugging Information</h3>
+            <%= debug(params) %>
+          </div>
+        </div>
+        <% end %>
     </div>
 </body>
 </html>

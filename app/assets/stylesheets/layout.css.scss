@@ -117,8 +117,29 @@ background: #42aaff;
 text-decoration: underline;
 }
 
-.success {
-  background: #E6EFC2;
-  color: #264409;
-  border-color: #FFD324; 
+
+/* Flash messages*/
+
+.flash, .success {
+  height: 25px;
+  background:#e6efc2;
+  color:#264409;
+  border-color:#c6d880;
+ font-size: 15px;
+ 
+}
+
+/* Debug Information */
+#debugwrap {
+    width: 600px;
+    float: none;
+    margin: 0 auto;
+    clear: both;
+    padding-top: 10px;
+}
+#debug {
+    background: black;
+    //border-radius: 10px;
+    //border: 1px solid #1feb52;
+      margin: none;
 }

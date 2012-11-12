@@ -1,13 +1,13 @@
 <div id = "tabs30">
    <ul>
-      <li><%= link_to sanitize(<span>Home</span>), root_path %></li>
+      <li><%= link_to "Home", root_path %></li>
       <li><%= link_to "Contact", contact_path %></li>
       <li><%= link_to "Help", help_path %></li>
       <li><%= link_to "Services", services_path %></li>
 
       <% if signed_in? %>
         <li><%= link_to "Log out", signout_path %></li>
-	<li><%= link_to "Edit Account", '#' %></li>
+	<li><%= link_to "Edit Profile", edit_user_path %></li>
       <% else %>
         <li><%= link_to "Sign in", signin_path %></li>
       <% end %>

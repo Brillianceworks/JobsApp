@@ -1,0 +1,41 @@
+<h1>Edit User</h1>
+<%= form_for @user do |f| %>
+  <%= render 'shared/errors' %>
+<table>
+  <tr>
+    <td><%= f.label :first_name %></td>
+    <td><%= f.text_field :first_name %></td><br />
+  </tr>
+  <tr>
+    <td><%= f.label :last_name %></td>
+    <td><%= f.text_field :last_name %></td><br />
+  </tr>
+  <tr>
+    <td><%= f.label :email %></td>
+    <td><%= f.email_field :email %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :user_name %></td>
+    <td><%= f.text_field :user_name %></td>
+  </tr>
+  <tr>
+  <tr>
+    <td><%= f.label :password %></td>
+    <td><%= f.password_field :password %></td>
+  </tr>
+    <td><%= f.label :password_confirmation %></td>
+    <td><%= f.password_field :password_confirmation %></td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td COLSPAN = "2", align = "center"><%= f.submit "Update" %></td> 
+  </tr>
+</table>
+
+<% end %>
+

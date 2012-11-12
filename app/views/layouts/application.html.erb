@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,7 +8,7 @@
     <div id="wrapper">
         <div id="headerwrap">
         <div id="header">
-            <p>This is the Header</p>
+            <p><%= link_to image_tag('logo.png', :alt => "Brilliance Jobs"), root_path %></p>
         </div>
         </div>
 	<div id = "navigationwrap">
@@ -23,6 +24,7 @@
           <%= yield %>
         </div>
         </div>
+        <% if !signed_in? %>
 	<div id="rightcolumnwrap">
         <div id="rightcolumn">
 	<h2>What we are?</h2>
@@ -32,6 +34,7 @@
 	</div>
         </div>
         </div>
+        <% end %>
         <div id="footerwrap">
         <div id="footer">
             <p>This is the Footer</p>
